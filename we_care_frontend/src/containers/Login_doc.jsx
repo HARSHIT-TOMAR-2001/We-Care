@@ -3,7 +3,7 @@ export default class Login extends Component {
   render() {
     return (
       <form>
-        <h3>Login</h3>
+        <h3>Login As Doctor</h3>
         <div className="mb-3">
           <label>Email address</label>
           <input
@@ -33,7 +33,7 @@ export default class Login extends Component {
           </div>
         </div>
         <div className="d-grid">
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-dark">
             Submit
           </button>
         </div>
