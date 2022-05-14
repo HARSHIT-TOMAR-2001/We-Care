@@ -23,8 +23,10 @@ function App() {
         </h1>
         <Navbr />
         <div className="seekBlood fixed-top-right">
-        <img className="blood-logo" src="blood bottle.png" alt="Blood logo"/>
-          <Link className="seek_b" to={"/"}>Seek Blood</Link>
+          <img className="blood-logo" src="blood bottle.png" alt="Blood logo" />
+          <Link className="seek_b" to={"/Home"}>
+            Seek Blood
+          </Link>
         </div>
         <div className="auth-wrapper">
           <div className="auth-inner">
