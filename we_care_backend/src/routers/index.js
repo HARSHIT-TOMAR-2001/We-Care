@@ -5,6 +5,6 @@ const authRouter = require("../routers/auth.router");
 Router.get("", (req, res) => {
   res.send("Welcome to Seekmy-chat app");
 });
-Router.use("/auth", authRouter);
+Router.use("/auth/", authRouter);
 // Router.use("/chatroom",chatRouter);
 module.exports = Router;
