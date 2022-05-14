@@ -10,7 +10,7 @@ export default class SignUp extends Component {
           <input
             type="text"
             className="form-control"
-            placeholder="Name"
+            placeholder="Enter Your Name"
           />
         </div>
         <div className="mb-3">

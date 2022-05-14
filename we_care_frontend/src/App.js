@@ -9,7 +9,7 @@ import SignUp_pat from "./containers/Sign_pat";
 import SignUp_blood from "./containers/Sign_blood";
 import Log_pat from "./containers/Login_pat";
 import Log_blood from "./containers/Login_blood";
-import  Navbr from "./containers/Navbr";
+import Navbr from "./containers/Navbr";
 import Home from "./containers/Home";
 import { Button } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
@@ -18,8 +18,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1 className="fixed-top" id="logo_head">🩺weCare</h1>
-        <Navbr/>
+        <h1 className="fixed-top" id="logo_head">
+          🩺weCare
+        </h1>
+        <Navbr />
+        <div className="seekBlood fixed-top-right">
+        <img className="blood-logo" src="blood bottle.png" alt="Blood logo"/>
+          <Link className="seek_b" to={"/"}>Seek Blood</Link>
+        </div>
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Routes>
