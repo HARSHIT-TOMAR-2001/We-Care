@@ -8,8 +8,8 @@ const donorSchema = new mongoose.Schema({
   bloodGroup:{type: String, required:true},
   city: { type: String, required:true },
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
+  password: { type: String, required: true, unique:true },
 });
 
 const Donor = mongoose.model("Donor", donorSchema);
-module.exports = Doctor;
+module.exports = Donor;
