@@ -33,7 +33,7 @@ export default class Navbr extends Component {
                 </Link>
               </li>
             </DropdownButton>
-            <DropdownButton id="dropdown-blood" title="🩸 Blood Bank">
+            {/* <DropdownButton id="dropdown-blood" title="🩸 Blood Bank">
               <li className="nav-item">
                 <Link className="nav-link" to={"/sign-in-blood"}>
                   login
@@ -45,7 +45,7 @@ export default class Navbr extends Component {
                   Sign Up
                 </Link>
               </li>
-            </DropdownButton>
+            </DropdownButton> */}
           </div>
         </div>
       </nav>

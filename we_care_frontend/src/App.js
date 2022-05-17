@@ -13,21 +13,15 @@ import Navbr from "./containers/Navbr";
 import Home from "./containers/Home";
 import { Button } from "react-bootstrap";
 import DropdownItem from "react-bootstrap/esm/DropdownItem";
+import TopBar from "./containers/TopBar";
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <h1 className="fixed-top" id="logo_head">
-          🩺weCare
-        </h1>
-        <Navbr />
-        <div className="seekBlood fixed-top-right">
-          <img className="blood-logo" src="blood bottle.png" alt="Blood logo" />
-          <Link className="seek_b" to={"/Home"}>
-            Seek Blood
-          </Link>
-        </div>
+        
+        <TopBar/>
+
         <div className="auth-wrapper">
           <div className="auth-inner">
             <Routes>
