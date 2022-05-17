@@ -1,9 +1,93 @@
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import { Form } from "react-bootstrap";
-export default class SignUp extends Component {
+import axios from "axios";
+export default class SignUpAsPatient extends Component {
+  constructor(props) {
+    super(props);
+    this.nameRef = React.createRef();
+    this.contactRef = React.createRef();
+    this.degRef = React.createRef();
+    this.specRef = React.createRef();
+    this.cityRef = React.createRef();
+    this.addRef = React.createRef();
+    this.emailRef = React.createRef();
+    this.passRef = React.createRef();
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    axios
+      .post(`http://localhost:4000/api/auth/doctor/signup`, {
+        name: this.nameRef.current.value,
+        contact_details: this.contactRef.current.value,
+        degree: this.degRef.current.value,
+        specialization: this.specRef.current.value,
+        city: this.cityRef.current.value,
+        address: this.addRef.current.value,
+        email_id: this.emailRef.current.value,
+        password: this.passRef.current.value,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+      });
+  };
   render() {
+    const degrees = [
+      {
+        label: "MBBS",
+        value: "mbbs",
+      },
+      {
+        label: "BAMS",
+        value: "bams",
+      },
+      {
+        label: "BDS",
+        value: "bds",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+    ];
+
+    const specializations = [
+      {
+        label: "Ear, Nose, Tongue",
+        value: "ent",
+      },
+      {
+        label: "Gastro",
+        value: "gastro",
+      },
+      {
+        label: "BDS",
+        value: "bds",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+      {
+        label: "BUMS",
+        value: "bums",
+      },
+    ];
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <h3>Sign Up As Doctor</h3>
         <div className="mb-3">
           <label>Name</label>
@@ -11,6 +95,7 @@ export default class SignUp extends Component {
             type="text"
             className="form-control"
             placeholder="Enter Your Name"
+            ref={this.nameRef}
           />
         </div>
         <div className="mb-3">
@@ -19,30 +104,27 @@ export default class SignUp extends Component {
             type="number"
             className="form-control"
             placeholder="Enter Contact Number"
+            ref={this.contactRef}
           />
         </div>
         <div className="mb-3">
           <label>Degree</label>
           <Form.Select>
-            <option>...</option>
-            <option>MBBS</option>
-            <option>BDS</option>
-            <option>BAMS</option>
-            <option>BUMS</option>
-            <option>BHMS</option>
+            {degrees.map((optionDeg) => (
+              <option ref={this.degRef} value={optionDeg.value}>
+                {optionDeg.label}
+              </option>
+            ))}
           </Form.Select>
         </div>
         <div className="mb-3">
           <label>Specialisation (MD/MS)</label>
           <Form.Select>
-            <option>...</option>
-            <option>Dermatology, Venerology and Leprosy (MS)</option>
-            <option>Ear, Nose and Throat (MS)</option>
-            <option>General Medicine (MD)</option>
-            <option>General Surgery (MS)</option>
-            <option>Gynaecology (MS)</option>
-            <option>Psychiatry (MD)</option>
-            <option>Skin and Venereal diseases (MD)</option>
+            {specializations.map((optionSpec) => (
+              <option ref={this.specRef} value={optionSpec.value}>
+                {optionSpec.label}
+              </option>
+            ))}
           </Form.Select>
         </div>
         <div className="mb-3">
@@ -57,6 +139,7 @@ export default class SignUp extends Component {
             type="text"
             className="form-control"
             placeholder="Enter City"
+            ref={this.cityRef}
           />
         </div>
         <div className="mb-3">
@@ -65,6 +148,7 @@ export default class SignUp extends Component {
             type="text"
             className="form-control"
             placeholder="Enter Hospital Address"
+            ref={this.addRef}
           />
         </div>
 
@@ -74,6 +158,7 @@ export default class SignUp extends Component {
             type="email"
             className="form-control"
             placeholder="Enter email"
+            ref={this.emailRef}
           />
         </div>
         <div className="mb-3">
@@ -82,6 +167,7 @@ export default class SignUp extends Component {
             type="password"
             className="form-control"
             placeholder="Enter password"
+            ref={this.passRef}
           />
         </div>
         <div className="d-grid">
