@@ -1,0 +1,88 @@
+/*body{
+    
+     
+   /* background: #e3f2fd;  /* fallback for old browsers */
+   /* background: -webkit-linear-gradient(to right, hsl(210, 32%, 89%), #93c1e0);  /* Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ 
+  
+} */
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800");
+@import url("https://fonts.googleapis.com/css2?family=Aclonica&family=Basic&family=Cinzel+Decorative:wght@700&family=Courgette&family=Kaushan+Script&family=Leckerli+One&family=Lobster+Two:wght@700&family=Merienda+One&family=Oleo+Script:wght@700&family=Pacifico&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+    
+   
+}
+.m-auto{
+    width: 600px;
+    height: 40px; 
+    font-size: 40;
+    
+    
+}
+/* for images */
+body {
+    background: url("./images/docter.jpeg");
+    background-size: cover;
+    /* overflow-y: hidden; */
+    min-height: 100vh;
+   /* display: flex; */
+    font-weight: 400;
+    font-family: "Fira Sans", sans-serif;
+  }
+#form_login {
+    left: 53%;
+    top: 70%;
+    margin-left: -25%;
+    position: absolute;
+  /*  border: medium solid rgb(199, 174, 174);
+    border-width: 2px;
+    border-collapse: separate;
+    border-radius: 10px;*/
+   
+    font-family: "Fira Sans", sans-serif;
+    margin-top: -25%;
+}
+.mb-3{
+   
+    width: 450px;
+    height: 60px; 
+    
+}
+
+.d-grid{
+
+    width: 450px;
+    height: 45px; 
+   
+}
+
+.form{
+    background-color: white;
+    border-radius: 5px;
+    width: 50px;
+    margin: 100px auto;
+    padding: 20px;
+    height: 600px; 
+}
+
+.form-body{
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.form-body > *{
+    padding: 5px;
+}
+
+.form__label{
+    width: 10%;
+}
+
+.form_input{
+    width: 60%;
+}
+
+.footer{
+    text-align: center;
+}
