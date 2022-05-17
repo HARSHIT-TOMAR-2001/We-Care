@@ -53,7 +53,7 @@ const create_slot=async (req,res)=>{
   // console.log(req.body);
   // const  {name,contact_details,degree,specialization,city,address,email_id,slots}=req.body;
   try {
-    const updatedSlot= await Doctor.updateOne({email:req.body.email_id},{$push:{slots:{start_time:req.body.start_time, end_time:req.body.end_time}}},{$inc:{slots:{curr_limit:1}}})
+    const updatedSlot= await Doctor.updateOne({email:req.body.email_id},{$push:{slots:{start_time:req.body.start_time, end_time:req.body.end_time,max_limit:req.body.max_limit}}})
     if (!updatedSlot) {
       return res.status(400).send({ msg: "cannot update slot",status:0 });
     }

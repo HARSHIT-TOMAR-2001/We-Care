@@ -11,9 +11,9 @@ const docSchema = new mongoose.Schema({
   address:{type:String, required: true},
   password: { type: String, required: true, unique: true },
   slots:[{
-      start_time:Date,
-      end_time:Date,
-      max_limit:{type:Number},
+      start_time:String,
+      end_time:String,
+      max_limit:{type:Number,required:true},
       curr_limit: {type: Number, default: 0}
   },{}]
 });
