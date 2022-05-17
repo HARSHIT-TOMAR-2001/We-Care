@@ -1,14 +1,15 @@
 const mongoose = require("mongoose");
 
 const patientSchema = new mongoose.Schema({
-  name: { type: String, required: true },
+  firstname: { type: String, required: true },
+  lastname: { type: String,  },
+  contact: { type: Number, required: true, },
+  age:{type: Number, required: true},
+  gender:{type: String, required: true},
   email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  phone: { type: Number, required: true, unique: true },
-  age:{},
-  gender:{},
+  password: { type: String, required: true , unique:true},
 });
 
-const Patient = mongoose.model("User", patientSchema);
+const Patient = mongoose.model("Patient", patientSchema);
 
-module.exports = User;
+module.exports = Patient;
